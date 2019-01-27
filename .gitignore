@@ -1,0 +1,8 @@
+android
+ios
+.json
+node_modules
+.buckconfig
+.flowconfig
+.watchmanconfig
+babel.config.js
