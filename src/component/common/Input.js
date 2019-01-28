@@ -4,7 +4,7 @@ import { TextInput, View, Text } from 'react-native';
 
 // reuseable Input component
 
-const Input = ({ label, value, onChangeText }) => {
+const Input = ({ label, value, onChangeText, placeHolder, secureTextEntry }) => {
 
   const { inputStyle, labelStyle, containerStyle } = styles;
 
@@ -12,10 +12,12 @@ const Input = ({ label, value, onChangeText }) => {
     <View style={containerStyle}>
       <Text style={labelStyle}>{label}</Text>
       <TextInput
+        secureTextEntry={secureTextEntry}
+        autoCorrect={false}
+        placeHolder={placeHolder}
         style={inputStyle}
         value={value}
         onChangeText={onChangeText}
-        style={{ height: 20, width: 100 }}
       />
     </View>
   )
