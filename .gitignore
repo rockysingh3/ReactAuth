@@ -6,3 +6,4 @@ node_modules
 .flowconfig
 .watchmanconfig
 babel.config.js
+App.js
