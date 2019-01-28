@@ -6,12 +6,7 @@ class LoginForm extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { text: '' };
-  }
-
-  // gets user input and stores it in the state
-  handleChangeText = (typedText) => {
-    this.setState({ text: typedText });
+    this.state = { text: '', password: '' };
   }
 
 
@@ -20,11 +15,20 @@ class LoginForm extends Component {
       <Card>
         <CardSection />
           <Input
+            placeHolder="Enter your email"
             label="Email"
             value={this.state.text}
-            onChangeText={this.handleChangeText}
-           />
-        <CardSection />
+            onChangeText={email => this.setState({ email })}
+          />
+        <CardSection>
+          <Input
+            secureTextEntry
+            placeHolder="enter your password"
+            label="Password"
+            value={this.state.password}
+            onChangeText={password => this.setState({ password })}
+          />
+        </CardSection>
 
         <CardSection>
             <Button>
